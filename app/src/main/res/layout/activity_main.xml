@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Root layout using RelativeLayout -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#789999"> <!-- Background color of the activity -->
+
+    <!-- ImageView for displaying the logo at the top center of the screen -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:contentDescription="@string/music_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+    <!-- TextView for the radio station title displayed below the logo -->
+    <TextView
+        android:id="@+id/stationTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/txt_muscle_of_the_shoals"
+        android:textColor="#212121"
+        android:textSize="18sp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:freezesText="true"
+        android:textAlignment="center" />
+
+    <!-- ImageButton used as the play/pause button -->
+    <ImageButton
+        android:id="@+id/playPauseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stationTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@android:drawable/ic_media_play"
+        android:contentDescription="@string/btn_play_pause"
+        tools:ignore="ImageContrastCheck" />
+
+    <!-- ProgressBar to indicate loading or buffering -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <!-- ImageButton used for sharing the stream -->
+    <ImageButton
+        android:id="@+id/shareButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/playPauseButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:src="@android:drawable/ic_menu_share"
+        android:contentDescription="@string/btn_share"
+        tools:ignore="ImageContrastCheck" />
+
+    <!-- ImageButton for muting and unmuting the volume -->
+    <ImageButton
+        android:id="@+id/volumeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/playPauseButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:src="@android:drawable/ic_lock_silent_mode_off"
+        android:contentDescription="@string/btn_mute_unmute"
+        tools:ignore="ImageContrastCheck" />
+
+</RelativeLayout>

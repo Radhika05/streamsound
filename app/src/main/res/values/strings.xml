@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Stream Sound</string>
+    <string name="txt_listening">Check out this great music station I\'m listening to: https://s2.radio.co/sd32e5875e/listen</string>
+    <string name="txt_muscle_of_the_shoals">s2.radio.co</string>
+    <string name="music_logo">music_logo</string>
+    <string name="btn_play_pause">btn_play_pause</string>
+    <string name="btn_share">btn_share</string>
+    <string name="btn_mute_unmute">btn_mute_unmute</string>
+</resources>
